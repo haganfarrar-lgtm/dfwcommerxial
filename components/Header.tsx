@@ -83,20 +83,24 @@ export default function Header() {
               Home
             </Link>
 
-            {/* Services Dropdown - Click Based */}
-            <div className="relative" ref={servicesRef}>
+            {/* Services Dropdown - Hover Based */}
+            <div 
+              className="relative" 
+              onMouseEnter={() => {
+                setServicesOpen(true);
+                setCitiesOpen(false);
+              }}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
               <button
-                className="text-forest-800 flex items-center gap-1 hover:text-forest-600 transition-colors font-medium py-2"
-                onClick={() => {
-                  setServicesOpen(!servicesOpen);
-                  setCitiesOpen(false);
-                }}
+                className="text-forest-800 flex items-center gap-1 hover:text-forest-600 transition-colors font-medium py-4"
+                onClick={(e) => e.preventDefault()}
               >
                 Services <ChevronDown size={16} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                  <div className="w-[700px] bg-white text-stone-900 shadow-2xl rounded-xl p-6 grid grid-cols-2 gap-6 border border-stone-100 relative">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-0 z-50">
+                  <div className="w-[700px] bg-white text-stone-900 shadow-2xl rounded-xl p-6 grid grid-cols-2 gap-6 border border-stone-100 relative mt-2">
                     <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 border-l border-t border-stone-100"></div>
                     {serviceCategories.map((cat) => (
                       <div key={cat.category}>
@@ -123,20 +127,24 @@ export default function Header() {
               )}
             </div>
 
-            {/* Cities Dropdown - Click Based */}
-            <div className="relative" ref={citiesRef}>
+            {/* Cities Dropdown - Hover Based */}
+            <div 
+              className="relative"
+              onMouseEnter={() => {
+                setCitiesOpen(true);
+                setServicesOpen(false);
+              }}
+              onMouseLeave={() => setCitiesOpen(false)}
+            >
               <button
-                className="text-forest-800 flex items-center gap-1 hover:text-forest-600 transition-colors font-medium py-2"
-                onClick={() => {
-                  setCitiesOpen(!citiesOpen);
-                  setServicesOpen(false);
-                }}
+                className="text-forest-800 flex items-center gap-1 hover:text-forest-600 transition-colors font-medium py-4"
+                onClick={(e) => e.preventDefault()}
               >
                 Service Areas <ChevronDown size={16} className={`transition-transform ${citiesOpen ? 'rotate-180' : ''}`} />
               </button>
               {citiesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                  <div className="w-[450px] bg-white text-stone-900 shadow-2xl rounded-xl p-6 border border-stone-100 relative">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-0 z-50">
+                  <div className="w-[450px] bg-white text-stone-900 shadow-2xl rounded-xl p-6 border border-stone-100 relative mt-2">
                     <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 border-l border-t border-stone-100"></div>
                     <h3 className="font-display font-semibold text-forest-800 mb-3 pb-2 border-b border-forest-100">
                       Cities We Serve

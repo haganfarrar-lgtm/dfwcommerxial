@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Projects from '@/components/Projects';
@@ -12,35 +12,35 @@ import { cities } from '@/data/cities';
 import { businessInfo, generateFAQSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Premier Landscaping & Hardscaping Services in Colleyville, TX',
-  description: 'Transform your outdoor space with Colleyville Landscaping. Expert landscape design, hardscaping, irrigation, and more. Serving Colleyville, Southlake, Keller, Grapevine & surrounding DFW areas. Free estimates!',
-  keywords: 'landscaping Colleyville TX, hardscaping, landscape design, paver installation, outdoor living, irrigation, tree planting, mulch, sod, French drain, outdoor lighting, Southlake landscaping, Keller landscaping, Grapevine landscaping',
+  title: 'Top-Rated Landscaping & Hardscaping in Colleyville, TX | Free Estimates',
+  description: 'Premier landscaping services in Colleyville, TX. Expert hardscaping, landscape design, outdoor living, irrigation, and lawn care. Serving Colleyville, Southlake, Keller, Grapevine & DFW. Call (214) 833-6805.',
+  keywords: 'landscaping Colleyville TX, hardscaping Colleyville, landscape design, paver patios, outdoor kitchens, irrigation repair, sod installation, retaining walls, Colleyville landscapers, Southlake landscaping, Keller landscaping',
 };
 
 const homeFaqs = [
   {
-    question: 'What areas do you serve?',
-    answer: 'We proudly serve Colleyville, Texas and surrounding communities including Southlake, Keller, Grapevine, Trophy Club, Westlake, Roanoke, Flower Mound, Highland Village, Coppell, and other cities within 50 miles of Colleyville.'
+    question: 'What landscaping services do you offer in Colleyville?',
+    answer: 'We offer comprehensive landscaping and hardscaping services in Colleyville, including custom landscape design, paver patio installation, retaining walls, outdoor kitchens, pergolas, sod installation, irrigation repair, drainage solutions, and seasonal cleanups.'
   },
   {
-    question: 'Do you offer free estimates?',
-    answer: 'Yes! We provide free, no-obligation estimates for all landscaping and hardscaping projects. Our team will visit your property, discuss your vision, and provide a detailed quote with transparent pricing.'
+    question: 'Do you serve areas outside of Colleyville?',
+    answer: 'Yes! While we are based in Colleyville, we proudly serve surrounding communities including Southlake, Keller, Grapevine, Trophy Club, Westlake, Roanoke, Flower Mound, Highland Village, and Coppell.'
   },
   {
-    question: 'How long does a typical landscaping project take?',
-    answer: 'Project timelines vary based on scope. A simple installation might take 1-2 days, while a complete landscape renovation could take 2-4 weeks. We provide detailed timelines during your consultation.'
+    question: 'How much does a landscaping project cost?',
+    answer: 'Project costs vary widely based on scope and materials. We provide free, detailed estimates for all projects. Small enhancements may start around $1,000, while complete outdoor living transformations can range from $10,000 to $100,000+.'
   },
   {
     question: 'Are you licensed and insured?',
-    answer: 'Absolutely. We are fully licensed and carry comprehensive liability insurance and workers\' compensation coverage to protect both our team and your property.'
+    answer: 'Absolutely. Colleyville Landscaping is fully licensed and carries comprehensive liability insurance and workers\' compensation coverage to protect you and your property during every project.'
   },
   {
-    question: 'What types of services do you offer?',
-    answer: 'We offer comprehensive landscaping services including landscape design, planting, sod installation, mulch, irrigation, hardscaping (pavers, concrete, flagstone), outdoor living spaces, fencing, drainage solutions, and maintenance.'
+    question: 'Do you offer landscape maintenance?',
+    answer: 'Yes, we offer seasonal maintenance services such as leaf cleanups, mulch installation, flower bed maintenance, and pruning to keep your Colleyville property looking its best year-round.'
   },
   {
-    question: 'Do you offer warranties on your work?',
-    answer: 'Yes, we stand behind our work with warranties on both materials and labor. Plant installations come with a 1-year replacement guarantee, and hardscape installations carry a 5-year workmanship warranty.'
+    question: 'What is your warranty on hardscaping projects?',
+    answer: 'We stand behind our craftsmanship. Our hardscaping installations, including patios and retaining walls, come with a 5-year workmanship warranty in addition to manufacturer warranties on materials.'
   }
 ];
 
@@ -60,17 +60,17 @@ export default function HomePage() {
         <div className="relative h-[70vh] md:h-[80vh]">
           <img
             src="/images/services/hardscaping/bob.jpg"
-            alt="Colleyville Landscaping"
+            alt="Luxury Hardscaping and Landscaping in Colleyville, TX"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-forest-950/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 text-white">
             <div className="container-custom">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                Professional Landscaping<br />Services in Colleyville
+                Top-Rated Landscaping &<br />Hardscaping in Colleyville
               </h1>
               <p className="text-xl md:text-2xl text-stone-200 mb-6 max-w-2xl">
-                15+ Years of Excellence · Trusted by Colleyville Homeowners
+                Creating Beautiful Outdoor Living Spaces in Colleyville & Southlake for Over 15 Years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/#contact" className="btn-primary inline-flex items-center gap-2">
@@ -94,17 +94,17 @@ export default function HomePage() {
             <div>
               <span className="text-forest-600 font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-forest-950 mt-3 mb-6">
-                Colleyville's Trusted Landscaping Experts
+                Colleyville's Premier Landscaping Experts
               </h2>
               <p className="text-lg text-stone-600 mb-8">
-                With over 15 years of experience serving the DFW metroplex, we've built our reputation on quality craftsmanship, attention to detail, and exceptional customer service. We treat every property as if it were our own.
+                We specialize in high-end residential landscaping and hardscaping. From custom stone patios to lush garden designs, our team delivers exceptional quality and service to Colleyville homeowners.
               </p>
               
               <div className="space-y-4 mb-8">
                 {[
-                  'Licensed, insured, and locally owned',
-                  'Custom designs tailored to your property',
-                  'Premium materials and expert installation',
+                  'Licensed, insured, and locally owned in Colleyville',
+                  'Custom 3D landscape designs available',
+                  'Premium stone and plant materials',
                   'Transparent pricing with no hidden fees',
                   'Dedicated project manager for every job',
                   'Satisfaction guaranteed on all work'
@@ -117,7 +117,7 @@ export default function HomePage() {
               </div>
 
               <Link href="#contact" className="btn-primary inline-flex items-center gap-2">
-                Get Started Today
+                Start Your Project
                 <ArrowRight size={18} />
               </Link>
             </div>
@@ -129,14 +129,14 @@ export default function HomePage() {
                     <Leaf className="w-7 h-7 text-forest-700" />
                   </div>
                   <h3 className="font-display font-semibold text-forest-900 mb-2">Landscaping</h3>
-                  <p className="text-stone-600 text-sm">Custom designs, planting, sod, mulch, and complete landscape transformations.</p>
+                  <p className="text-stone-600 text-sm">Expert design, planting, sod installation, and garden makeovers.</p>
                 </div>
                 <div className="bg-earth-50 rounded-2xl p-6 border border-earth-100">
                   <div className="w-14 h-14 bg-earth-100 rounded-xl flex items-center justify-center mb-4">
                     <Hammer className="w-7 h-7 text-earth-700" />
                   </div>
                   <h3 className="font-display font-semibold text-earth-900 mb-2">Hardscaping</h3>
-                  <p className="text-stone-600 text-sm">Patios, walkways, retaining walls, outdoor kitchens, and fireplaces.</p>
+                  <p className="text-stone-600 text-sm">Custom patios, walkways, retaining walls, and stonework.</p>
                 </div>
               </div>
               <div className="space-y-6 mt-12">
@@ -145,14 +145,14 @@ export default function HomePage() {
                     <Droplets className="w-7 h-7 text-blue-700" />
                   </div>
                   <h3 className="font-display font-semibold text-blue-900 mb-2">Irrigation</h3>
-                  <p className="text-stone-600 text-sm">Smart irrigation systems, repairs, and water-efficient solutions.</p>
+                  <p className="text-stone-600 text-sm">Sprinkler repair, installation, and drainage solutions.</p>
                 </div>
                 <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100">
                   <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
                     <Sun className="w-7 h-7 text-amber-700" />
                   </div>
                   <h3 className="font-display font-semibold text-amber-900 mb-2">Outdoor Living</h3>
-                  <p className="text-stone-600 text-sm">Pergolas, lighting, fire features, and complete outdoor spaces.</p>
+                  <p className="text-stone-600 text-sm">Pergolas, outdoor kitchens, fire pits, and lighting.</p>
                 </div>
               </div>
             </div>
@@ -172,10 +172,10 @@ export default function HomePage() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-forest-600 font-semibold uppercase tracking-wider text-sm">Service Areas</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-forest-950 mt-3 mb-6">
-              Proudly Serving the DFW Metroplex
+              Proudly Serving Colleyville & DFW
             </h2>
             <p className="text-lg text-stone-600">
-              Based in Colleyville, we provide professional landscaping services to communities throughout the Dallas-Fort Worth area. Find your city below.
+              We are your local landscaping professionals. Check out our service areas below.
             </p>
           </div>
 

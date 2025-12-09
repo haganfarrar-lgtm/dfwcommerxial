@@ -3,7 +3,7 @@ import { cities } from '@/data/cities';
 import { services } from '@/data/services';
 import { blogPosts } from '@/data/blog-posts';
 
-const baseUrl = 'https://grapevinelandscapingpros.com';
+const baseUrl = 'https://colleyvillelandscaping.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
