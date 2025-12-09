@@ -59,7 +59,7 @@ export default function HomePage() {
       <section className="relative">
         <div className="relative h-[70vh] md:h-[80vh]">
           <img
-            src="/images/services/landscape-design/dallas-texas-sustainable-landscaping-services-scaled.jpg"
+            src="/images/services/hardscaping/hardscaping-services-in-colleyville-tx-scaled.jpg"
             alt="Colleyville Landscaping"
             className="w-full h-full object-cover"
           />
