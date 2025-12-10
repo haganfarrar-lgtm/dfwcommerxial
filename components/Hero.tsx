@@ -13,7 +13,7 @@ interface HeroProps {
 export default function Hero({
   title,
   subtitle,
-  cityName = 'Southlake',
+  cityName = 'DFW',
   serviceName,
   backgroundImage
 }: HeroProps) {
@@ -45,7 +45,7 @@ export default function Hero({
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-5 border border-white/20">
             <Star size={14} className="fill-amber-400 text-amber-400" />
-            <span>Trusted by 500+ {cityName} Homeowners</span>
+            <span>Trusted by 500+ {cityName} Businesses</span>
           </div>
 
           {/* Title */}

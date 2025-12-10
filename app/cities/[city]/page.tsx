@@ -13,7 +13,7 @@ import { services } from '@/data/services';
 import { businessInfo, generateMetadata as genMeta, generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/seo';
 
 interface CityPageProps {
-  params: { city: string };
+  params: Promise<{ city: string }>;
 }
 
 export async function generateStaticParams() {
@@ -21,28 +21,29 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
-  const city = getCityBySlug(params.city);
+  const { city: citySlug } = await params;
+  const city = getCityBySlug(citySlug);
   if (!city) return {};
 
   return genMeta({
-    title: `Landscaping & Hardscaping Services in ${city.name}, TX`,
-    description: `Professional landscaping, hardscaping, and outdoor living services in ${city.name}, Texas. Expert landscape design, paver installation, irrigation, tree planting, and more. Free estimates from ${businessInfo.name}.`,
+    title: `Commercial Landscaping Services in ${city.name}, TX`,
+    description: `Professional commercial landscaping and grounds maintenance services in ${city.name}, Texas. Expert landscape design, irrigation, tree care, and more. Free estimates from ${businessInfo.name}.`,
     keywords: [
-      `landscaping ${city.name} TX`,
-      `hardscaping ${city.name}`,
+      `commercial landscaping ${city.name} TX`,
+      `grounds maintenance ${city.name}`,
       `landscape design ${city.name}`,
-      `paver installation ${city.name}`,
-      `irrigation ${city.name}`,
-      `lawn care ${city.name}`,
-      `${city.name} landscaper`,
-      `outdoor living ${city.name}`
+      `commercial irrigation ${city.name}`,
+      `tree trimming ${city.name}`,
+      `${city.name} commercial landscaper`,
+      `HOA landscaping ${city.name}`
     ],
     path: `/cities/${city.slug}`,
   });
 }
 
-export default function CityPage({ params }: CityPageProps) {
-  const city = getCityBySlug(params.city);
+export default async function CityPage({ params }: CityPageProps) {
+  const { city: citySlug } = await params;
+  const city = getCityBySlug(citySlug);
   
   if (!city) {
     notFound();
@@ -52,28 +53,28 @@ export default function CityPage({ params }: CityPageProps) {
 
   const cityFaqs = [
     {
-      question: `What landscaping services do you offer in ${city.name}?`,
-      answer: `We offer comprehensive landscaping services in ${city.name} including landscape design, planting, sod installation, mulch, river rock, irrigation systems, hardscaping (pavers, concrete, flagstone), outdoor lighting, fencing, drainage solutions, French drains, pergolas, outdoor fireplaces, and ongoing maintenance. We serve all neighborhoods in ${city.name} and surrounding areas.`
+      question: `What commercial landscaping services do you offer in ${city.name}?`,
+      answer: `We offer comprehensive commercial landscaping services in ${city.name} including grounds maintenance, landscape design, planting, sod installation, irrigation management, tree care, hardscaping, and seasonal enhancements. We serve all business districts in ${city.name}.`
     },
     {
-      question: `How much does landscaping cost in ${city.name}, TX?`,
-      answer: `Landscaping costs in ${city.name} vary based on the scope of work. A basic mulch and plant installation might start around $500-$1,500, while comprehensive landscape renovations can range from $5,000-$25,000+. Hardscape projects like patios typically range from $3,000-$15,000+. We provide free, detailed estimates for ${city.name} properties.`
+      question: `How do commercial contracts work in ${city.name}?`,
+      answer: `We offer flexible maintenance contracts tailored to your property's specific needs. Whether you need weekly mowing, seasonal color rotations, or comprehensive grounds management, we can build a plan that fits your budget.`
     },
     {
       question: `Are you licensed to work in ${city.name}?`,
-      answer: `Yes, ${businessInfo.name} is fully licensed and insured to perform landscaping and hardscaping work in ${city.name}, ${city.county} County, and throughout the DFW metroplex. We carry comprehensive liability insurance and workers' compensation coverage.`
+      answer: `Yes, ${businessInfo.name} is fully licensed and insured to perform commercial landscaping work in ${city.name}, ${city.county} County, and throughout the DFW metroplex. We carry comprehensive liability insurance.`
     },
     {
       question: `How long have you been serving ${city.name}?`,
-      answer: `We've been proudly serving ${city.name} and the surrounding DFW area for over 15 years. Many of our team members are local residents who understand the unique landscaping challenges and opportunities in ${city.county} County.`
+      answer: `We've been proudly serving commercial clients in ${city.name} and the DFW area for over 15 years. We understand the specific soil and climate conditions in ${city.county} County.`
     },
     {
       question: `Do you offer free estimates in ${city.name}?`,
-      answer: `Absolutely! We provide free, no-obligation estimates for all ${city.name} residents. Our team will visit your property, discuss your vision, and provide a detailed quote with transparent pricing. Contact us to schedule your consultation.`
+      answer: `Absolutely! We provide free, detailed proposals for all ${city.name} commercial properties. Our team will walk your site, discuss your goals, and provide a transparent quote.`
     },
     {
-      question: `What areas near ${city.name} do you also serve?`,
-      answer: `In addition to ${city.name}, we serve ${nearbyCities.map(c => c.name).join(', ')}, and other communities within 50 miles of Colleyville. Our central location allows us to efficiently serve the entire DFW metroplex.`
+      question: `What other areas near ${city.name} do you serve?`,
+      answer: `In addition to ${city.name}, we serve ${nearbyCities.map(c => c.name).join(', ')}, and the entire Dallas-Fort Worth Metroplex.`
     }
   ];
 
@@ -91,7 +92,7 @@ export default function CityPage({ params }: CityPageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(generateBreadcrumbSchema([
             { name: 'Home', url: '/' },
-            { name: 'Service Areas', url: '/cities/colleyville' },
+            { name: 'Service Areas', url: '/cities/dallas' },
             { name: city.name, url: `/cities/${city.slug}` }
           ]))
         }}
@@ -100,8 +101,8 @@ export default function CityPage({ params }: CityPageProps) {
       {/* Hero Section */}
       <Hero 
         cityName={city.name}
-        title={`Professional Landscaping & Hardscaping in ${city.name}, TX`}
-        subtitle={`Transform your ${city.name} property with expert landscaping services. From custom design to professional installation, we bring your outdoor vision to life. Serving ${city.name} and ${city.county} County.`}
+        title={`Commercial Landscaping in ${city.name}, TX`}
+        subtitle={`Professional grounds maintenance and landscape services for ${city.name} businesses. Enhance your property value with expert care from DFW Commercial Landscaping.`}
       />
 
       {/* City Intro Section */}
@@ -113,23 +114,23 @@ export default function CityPage({ params }: CityPageProps) {
                 {city.name} Landscaping
               </span>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-forest-950 mt-3 mb-6">
-                Expert Landscaping Services for {city.name} Properties
+                Expert Commercial Services for {city.name}
               </h2>
               <p className="text-lg text-stone-600 mb-6">
                 {city.description}
               </p>
               <p className="text-stone-600 mb-8">
-                Whether you need a complete landscape renovation, new patio installation, irrigation system, or ongoing maintenance, our experienced team delivers exceptional results for {city.name} homeowners. We understand the local climate, soil conditions, and HOA requirements to ensure your project succeeds.
+                From retail centers to office parks and HOAs, we provide reliable, high-quality landscaping services to properties in {city.name}. Our team is dedicated to keeping your business looking professional year-round.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {[
-                  'Custom landscape design',
-                  'Paver patios & walkways',
-                  'Irrigation installation',
-                  'Outdoor lighting',
-                  'Tree & shrub planting',
-                  'Drainage solutions'
+                  'Commercial grounds maintenance',
+                  'Landscape design & install',
+                  'Irrigation management',
+                  'Tree trimming & removal',
+                  'Seasonal color programs',
+                  'Mulch & sod installation'
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-forest-600 flex-shrink-0" />
@@ -140,7 +141,7 @@ export default function CityPage({ params }: CityPageProps) {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="#contact" className="btn-primary inline-flex items-center justify-center gap-2">
-                  Get Free Estimate
+                  Request Proposal
                   <ArrowRight size={18} />
                 </Link>
                 <a 
@@ -172,10 +173,6 @@ export default function CityPage({ params }: CityPageProps) {
                   <span className="font-medium text-forest-900">{city.population}</span>
                 </div>
                 <div className="flex justify-between py-3 border-b border-stone-200">
-                  <span className="text-stone-600">Distance from Colleyville</span>
-                  <span className="font-medium text-forest-900">{city.distance} miles</span>
-                </div>
-                <div className="flex justify-between py-3 border-b border-stone-200">
                   <span className="text-stone-600">Response Time</span>
                   <span className="font-medium text-forest-900">Within 24 hours</span>
                 </div>
@@ -187,7 +184,7 @@ export default function CityPage({ params }: CityPageProps) {
 
               {city.neighborhoods && city.neighborhoods.length > 0 && (
                 <div className="mt-6 pt-6 border-t border-stone-200">
-                  <h4 className="font-medium text-forest-900 mb-3">{city.name} Neighborhoods We Serve:</h4>
+                  <h4 className="font-medium text-forest-900 mb-3">{city.name} Areas We Serve:</h4>
                   <div className="flex flex-wrap gap-2">
                     {city.neighborhoods.map((neighborhood) => (
                       <span 
@@ -217,7 +214,7 @@ export default function CityPage({ params }: CityPageProps) {
               Also Serving Communities Near {city.name}
             </h2>
             <p className="text-lg text-stone-600">
-              We provide landscaping services throughout the DFW metroplex. Select a city below to learn more about our services in your area.
+              We provide commercial landscaping services throughout the DFW metroplex.
             </p>
           </div>
 
@@ -246,7 +243,7 @@ export default function CityPage({ params }: CityPageProps) {
       <CTASection 
         cityName={city.name}
         title={`Ready to Transform Your ${city.name} Property?`}
-        subtitle={`Get a free consultation and estimate for your ${city.name} landscaping project. Our team is ready to bring your outdoor vision to life.`}
+        subtitle={`Get a free consultation and estimate for your ${city.name} commercial landscaping project.`}
       />
 
       {/* FAQ */}
@@ -257,6 +254,3 @@ export default function CityPage({ params }: CityPageProps) {
     </>
   );
 }
-
-
-

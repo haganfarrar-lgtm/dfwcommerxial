@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Palette, Flower2, TreeDeciduous, Sprout, Layers, Circle, Leaf, Maximize, LayoutGrid, Grid3x3, Square, Pentagon, RectangleHorizontal, Grid2x2, Building, Flame, Home, PanelTop, Droplets, ArrowDownToLine, TrendingDown, Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles } from 'lucide-react';
+import { ArrowRight, Palette, Flower2, TreeDeciduous, Sprout, Layers, Circle, Leaf, Maximize, LayoutGrid, Grid3x3, Square, Pentagon, RectangleHorizontal, Grid2x2, Building, Flame, Home, PanelTop, Droplets, ArrowDownToLine, TrendingDown, Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles, Scissors, Grass } from 'lucide-react';
 import { services, Service, getServicesByCategory } from '@/data/services';
 
 interface ServicesProps {
@@ -12,15 +12,15 @@ const iconMap: { [key: string]: React.ElementType } = {
   Palette, Flower2, TreeDeciduous, Sprout, Layers, Circle, Leaf, Maximize,
   LayoutGrid, Grid3x3, Square, Pentagon, RectangleHorizontal, Grid2x2,
   Building, Flame, Home, Fence: PanelTop, Droplets, ArrowDownToLine, TrendingDown,
-  Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles
+  Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles, Scissors, Grass
 };
 
-export default function Services({ citySlug = 'southlake', showAll = false, limit }: ServicesProps) {
+export default function Services({ citySlug = 'dallas', showAll = false, limit }: ServicesProps) {
   const categories = [
-    { id: 'landscaping', name: 'Landscaping Services', description: 'Living elements that bring beauty and life to your property', color: 'forest' },
-    { id: 'hardscaping', name: 'Hardscaping Services', description: 'Durable structures for outdoor living and entertainment', color: 'earth' },
-    { id: 'specialty', name: 'Specialty Services', description: 'Specialized solutions for unique property needs', color: 'stone' },
-    { id: 'maintenance', name: 'Maintenance Services', description: 'Keep your landscape looking its best year-round', color: 'forest' },
+    { id: 'landscaping', name: 'Commercial Landscaping', description: 'Professional design and installation for business properties', color: 'forest' },
+    { id: 'hardscaping', name: 'Commercial Hardscaping', description: 'Durable paths, walls, and structures for high-traffic areas', color: 'earth' },
+    { id: 'specialty', name: 'Specialty Services', description: 'Irrigation, drainage, and custom commercial solutions', color: 'stone' },
+    { id: 'maintenance', name: 'Commercial Maintenance', description: 'Reliable upkeep for office parks, retail centers, and HOAs', color: 'forest' },
   ];
 
   return (
@@ -30,10 +30,10 @@ export default function Services({ citySlug = 'southlake', showAll = false, limi
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-forest-600 font-semibold uppercase tracking-wider text-sm">Our Services</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-forest-950 mt-3 mb-6">
-            Complete Landscaping & Outdoor Living Solutions
+            Complete Commercial Landscape Solutions
           </h2>
           <p className="text-lg text-stone-600">
-            From landscape design to hardscape installation, we provide comprehensive outdoor services for residential and commercial properties throughout Southlake and the DFW metroplex.
+            From design to ongoing maintenance, we provide comprehensive services for businesses, HOAs, and commercial properties throughout the DFW Metroplex.
           </p>
         </div>
 
@@ -111,4 +111,3 @@ export default function Services({ citySlug = 'southlake', showAll = false, limi
     </section>
   );
 }
-

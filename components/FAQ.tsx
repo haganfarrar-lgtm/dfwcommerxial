@@ -16,40 +16,32 @@ interface FAQProps {
 
 const defaultFaqs: FAQItem[] = [
   {
-    question: 'What areas do you serve?',
-    answer: 'We proudly serve Colleyville, Texas and surrounding communities including Southlake, Keller, Grapevine, Trophy Club, Westlake, Roanoke, Flower Mound, Highland Village, Coppell, and other cities within 50 miles of Colleyville. Contact us to confirm service in your area.'
+    question: 'What commercial areas do you serve?',
+    answer: 'We proudly serve the entire Dallas-Fort Worth Metroplex, including Dallas, Fort Worth, Colleyville, Southlake, Frisco, Plano, McKinney, Arlington, Irving, and all surrounding communities. Contact us to confirm service for your specific commercial property.'
   },
   {
-    question: 'Do you offer free estimates?',
-    answer: 'Yes! We provide free, no-obligation estimates for all landscaping and hardscaping projects. Our team will visit your property, discuss your vision, and provide a detailed quote. We believe in transparent pricing with no hidden fees.'
-  },
-  {
-    question: 'How long does a typical landscaping project take?',
-    answer: 'Project timelines vary based on scope and complexity. A simple mulch and plant installation might take 1-2 days, while a complete landscape renovation could take 2-4 weeks. During your consultation, we\'ll provide a detailed timeline for your specific project.'
+    question: 'Do you offer free estimates for commercial projects?',
+    answer: 'Yes! We provide free, detailed estimates for all commercial landscaping and maintenance contracts. Our team will visit your site, assess your needs, and provide a comprehensive proposal.'
   },
   {
     question: 'Are you licensed and insured?',
-    answer: 'Absolutely. We are fully licensed and carry comprehensive liability insurance and workers\' compensation coverage. This protects both our team and your property throughout every project.'
+    answer: 'Absolutely. We are fully licensed and carry comprehensive commercial liability insurance and workers\' compensation coverage. This ensures your business and our team are protected throughout every project.'
   },
   {
-    question: 'What types of payment do you accept?',
-    answer: 'We accept all major credit cards, checks, and cash. For larger projects, we offer flexible payment plans with a deposit to begin work and remaining balance upon completion. Financing options are also available for qualifying projects.'
+    question: 'Do you provide ongoing maintenance contracts?',
+    answer: 'Yes, we specialize in long-term commercial maintenance contracts. Our services include mowing, edging, trimming, fertilization, seasonal color, and irrigation management to keep your property professional year-round.'
   },
   {
-    question: 'Do you offer warranties on your work?',
-    answer: 'Yes, we stand behind our work. We offer warranties on both materials and labor. Plant installations come with a 1-year replacement guarantee when maintained according to our care instructions. Hardscape installations carry a 5-year warranty on workmanship.'
+    question: 'Can you handle large-scale tree trimming?',
+    answer: 'Yes, our team is equipped to handle large-scale commercial tree trimming, pruning, and removal. We ensure safety and proper tree health for office parks, retail centers, and HOA properties.'
   },
   {
-    question: 'What is the best time of year for landscaping in Texas?',
-    answer: 'In North Texas, spring (March-May) and fall (September-November) are ideal for planting. Hardscaping can be done year-round. We recommend scheduling projects early in these seasons as our calendar fills quickly.'
-  },
-  {
-    question: 'Do you provide maintenance services after installation?',
-    answer: 'Yes, we offer ongoing maintenance programs to keep your landscape looking its best. Services include seasonal cleanups, mulch refresh, pruning, irrigation adjustments, and more. Ask about our maintenance packages.'
+    question: 'What is your response time for storm damage?',
+    answer: 'We prioritize storm damage cleanup for our commercial clients to ensure safety and access. We aim for rapid response to clear debris and fallen limbs to minimize business disruption.'
   }
 ];
 
-export default function FAQ({ cityName = 'Southlake', faqs = defaultFaqs }: FAQProps) {
+export default function FAQ({ cityName = 'DFW', faqs = defaultFaqs }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
@@ -67,7 +59,7 @@ export default function FAQ({ cityName = 'Southlake', faqs = defaultFaqs }: FAQP
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-stone-600 mb-8">
-              Have questions about our landscaping services in {cityName}? Find answers to common questions below, or contact us directly for personalized assistance.
+              Have questions about our commercial landscaping services in {cityName}? Find answers below or contact us for a personalized consultation.
             </p>
             
             <div className="bg-forest-50 rounded-xl p-6 border border-forest-100">
@@ -128,6 +120,3 @@ export default function FAQ({ cityName = 'Southlake', faqs = defaultFaqs }: FAQP
     </section>
   );
 }
-
-
-

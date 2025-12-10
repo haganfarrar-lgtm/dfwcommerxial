@@ -15,8 +15,17 @@ export const cities: City[] = [
     county: 'Tarrant',
     distance: 0,
     population: '27,000+',
-    description: 'Our home base and primary service area. Colleyville is known for its beautiful estates, large lots, and homeowners who take pride in their pristine outdoor living spaces.',
-    neighborhoods: ['Montclair Parc', 'Pleasant Run', 'Lakewood Estates', 'Colleyville Heights', 'Leyton Grove', 'Somerset Manor']
+    description: 'Providing premium commercial landscaping services to businesses and properties in Colleyville.',
+    neighborhoods: ['Colleyville Blvd', 'Glade Rd', 'Hall-Johnson']
+  },
+  {
+    slug: 'mansfield',
+    name: 'Mansfield',
+    county: 'Tarrant',
+    distance: 20,
+    population: '73,000+',
+    description: 'Expert commercial grounds maintenance and landscaping for Mansfield businesses.',
+    neighborhoods: ['Broad St', 'Debbie Lane', 'Matlock Rd']
   },
   {
     slug: 'grapevine',
@@ -24,161 +33,17 @@ export const cities: City[] = [
     county: 'Tarrant',
     distance: 4,
     population: '54,000+',
-    description: 'A historic neighbor to Colleyville with diverse landscaping needs, from charming historic homes to modern developments near the lake.',
-    neighborhoods: ['Lakeside', 'Stone Bridge Oaks', 'Grapevine Lake Estates', 'Silver Lake Estates']
-  },
-  {
-    slug: 'southlake',
-    name: 'Southlake',
-    county: 'Tarrant',
-    distance: 5,
-    population: '31,000+',
-    description: 'A prestigious community neighboring Colleyville. We provide expert landscaping to match the high standards of Southlake estates and HOAs.',
-    neighborhoods: ['Timarron', 'Shady Oaks', 'Coventry Manor', 'Estes Park', 'Southlake Town Square', 'Chapel Creek', 'Stratford Park', 'Lakewood Estates', 'Carillon']
-  },
-  {
-    slug: 'keller',
-    name: 'Keller',
-    county: 'Tarrant',
-    distance: 5,
-    population: '50,000+',
-    description: 'Just west of Colleyville, Keller features beautiful residential properties where we provide top-tier lawn care and landscape design.',
-    neighborhoods: ['Hidden Lakes', 'Marshall Ridge', 'Woodland Hills', 'Bourland Oaks', 'The Reserve at Keller']
-  },
-  {
-    slug: 'bedford',
-    name: 'Bedford',
-    county: 'Tarrant',
-    distance: 3,
-    population: '49,000+',
-    description: 'Located immediately south of Colleyville, Bedford is a key part of our daily service routes for maintenance and installation.',
-    neighborhoods: ['Bedford Heights', 'Stonegate', 'Meadowpark', 'Bedford Woods']
-  },
-  {
-    slug: 'north-richland-hills',
-    name: 'North Richland Hills',
-    county: 'Tarrant',
-    distance: 5,
-    population: '72,000+',
-    description: 'A convenient distance from our Colleyville headquarters, serving established neighborhoods with mature trees.',
-    neighborhoods: ['Iron Horse', 'North Park', 'Smithfield', 'Boulevard Oaks']
-  },
-  {
-    slug: 'hurst',
-    name: 'Hurst',
-    county: 'Tarrant',
-    distance: 5,
-    population: '39,000+',
-    description: 'Part of the HEB area and a frequent destination for our landscaping crews providing quality service.',
-    neighborhoods: ['Bellaire', 'Pipeline', 'Northeast Hurst', 'Cannon Park']
-  },
-  {
-    slug: 'euless',
-    name: 'Euless',
-    county: 'Tarrant',
-    distance: 6,
-    population: '56,000+',
-    description: 'Serving the Euless community with professional landscaping, hardscaping, and irrigation services.',
-    neighborhoods: ['Bear Creek', 'Arbor Park', 'Villages of Bear Creek', 'Midway Park']
-  },
-  {
-    slug: 'westlake',
-    name: 'Westlake',
-    county: 'Tarrant',
-    distance: 8,
-    population: '1,500+',
-    description: 'Serving the exclusive estates of Westlake with premium, high-detail landscape management and design.',
-    neighborhoods: ['Vaquero', 'Glenwyck Farms', 'Terra Bella', 'Stagecoach Hills']
-  },
-  {
-    slug: 'trophy-club',
-    name: 'Trophy Club',
-    county: 'Denton',
-    distance: 10,
-    population: '13,000+',
-    description: 'Just a short drive north, we serve Trophy Club residents who appreciate golf-course quality lawns and landscapes.',
-    neighborhoods: ['Trophy Club Country Club', 'The Highlands', 'Trophy Wood', 'The Knolls']
-  },
-  {
-    slug: 'roanoke',
-    name: 'Roanoke',
-    county: 'Denton',
-    distance: 12,
-    population: '10,000+',
-    description: 'Providing expert landscaping to the "Unique Dining Capital of Texas" and its beautiful residential areas.',
-    neighborhoods: ['Oak Street', 'Marshall Creek', 'Oak Pointe']
-  },
-  {
-    slug: 'coppell',
-    name: 'Coppell',
-    county: 'Dallas',
-    distance: 12,
-    population: '42,000+',
-    description: 'Serving Coppell homeowners with reliable, high-quality landscaping and outdoor living solutions.',
-    neighborhoods: ['Riverchase', 'Northlake Woodlands', 'Coppell Greens', 'The Lakes']
-  },
-  {
-    slug: 'flower-mound',
-    name: 'Flower Mound',
-    county: 'Denton',
-    distance: 14,
-    population: '79,000+',
-    description: 'Extending our expert services to the beautiful properties of Flower Mound.',
-    neighborhoods: ['Bridlewood', 'Tour 18', 'Wellington', 'Lakeside DFW', 'Canyon Falls']
-  },
-  {
-    slug: 'irving',
-    name: 'Irving',
-    county: 'Dallas',
-    distance: 15,
-    population: '256,000+',
-    description: 'Serving select residential areas in Irving, particularly Las Colinas and Valley Ranch.',
-    neighborhoods: ['Las Colinas', 'Valley Ranch', 'Lake Carolyn', 'Hackberry Creek']
-  },
-  {
-    slug: 'carrollton',
-    name: 'Carrollton',
-    county: 'Dallas/Denton',
-    distance: 18,
-    population: '138,000+',
-    description: 'Providing landscaping services to Carrollton residents who value curb appeal and quality work.',
-    neighborhoods: ['Castle Hills', 'Indian Creek', 'The Trails', 'Prestonwood']
-  },
-  {
-    slug: 'highland-village',
-    name: 'Highland Village',
-    county: 'Denton',
-    distance: 18,
-    population: '16,000+',
-    description: 'Serving Highland Village with custom landscape design and installation services.',
-    neighborhoods: ['The Shores', 'Highland Meadows', 'Lakewood Village', 'The Orchards']
-  },
-  {
-    slug: 'fort-worth',
-    name: 'Fort Worth',
-    county: 'Tarrant',
-    distance: 20,
-    population: '935,000+',
-    description: 'Serving select neighborhoods in Fort Worth with our premier landscaping services.',
-    neighborhoods: ['Westover Hills', 'Rivercrest', 'Tanglewood', 'Mira Vista', 'Montserrat']
-  },
-  {
-    slug: 'arlington',
-    name: 'Arlington',
-    county: 'Tarrant',
-    distance: 20,
-    population: '398,000+',
-    description: 'Providing professional landscaping to residential clients in Arlington.',
-    neighborhoods: ['Interlochen', 'Lake Arlington', 'Viridian', 'Rush Creek']
+    description: 'Serving Grapevine\'s historic downtown and commercial districts with top-tier landscaping.',
+    neighborhoods: ['Main Street', 'Grapevine Mills', 'Glade Road']
   },
   {
     slug: 'frisco',
     name: 'Frisco',
     county: 'Collin',
     distance: 25,
-    population: '220,000+',
-    description: 'Serving Frisco with high-end landscape design and outdoor living projects.',
-    neighborhoods: ['Starwood', 'Newman Village', 'Richwoods', 'Phillips Creek Ranch', 'The Trails']
+    population: '200,000+',
+    description: 'Complete commercial landscape solutions for Frisco\'s rapidly growing corporate campuses.',
+    neighborhoods: ['The Star', 'Legacy West', 'Stonebriar']
   },
   {
     slug: 'plano',
@@ -186,8 +51,278 @@ export const cities: City[] = [
     county: 'Collin',
     distance: 28,
     population: '287,000+',
-    description: 'Extending our services to Plano for major landscape renovations and installations.',
-    neighborhoods: ['Willow Bend', 'Kings Ridge', 'Deerfield', 'Preston Hollow', 'Legacy']
+    description: 'Professional landscape management for Plano\'s corporate headquarters and retail centers.',
+    neighborhoods: ['Legacy', 'Preston Rd', 'Shops at Willow Bend']
+  },
+  {
+    slug: 'mckinney',
+    name: 'McKinney',
+    county: 'Collin',
+    distance: 35,
+    population: '195,000+',
+    description: 'Enhancing McKinney\'s commercial appeal with professional landscaping services.',
+    neighborhoods: ['Craig Ranch', 'Historic Downtown', 'Eldorado']
+  },
+  {
+    slug: 'southlake',
+    name: 'Southlake',
+    county: 'Tarrant',
+    distance: 5,
+    population: '31,000+',
+    description: 'High-end commercial landscaping for Southlake Town Square and surrounding businesses.',
+    neighborhoods: ['Southlake Town Square', 'Carroll Ave', 'Southlake Blvd']
+  },
+  {
+    slug: 'euless',
+    name: 'Euless',
+    county: 'Tarrant',
+    distance: 6,
+    population: '56,000+',
+    description: 'Reliable commercial grounds care for properties in Euless.',
+    neighborhoods: ['Industrial Blvd', 'Main St', 'Midway Park']
+  },
+  {
+    slug: 'north-richland-hills',
+    name: 'North Richland Hills',
+    county: 'Tarrant',
+    distance: 5,
+    population: '72,000+',
+    description: 'Comprehensive landscaping services for North Richland Hills businesses.',
+    neighborhoods: ['Davis Blvd', 'Loop 820', 'Boulevard 26']
+  },
+  {
+    slug: 'arlington',
+    name: 'Arlington',
+    county: 'Tarrant',
+    distance: 20,
+    population: '398,000+',
+    description: 'Serving the Entertainment District and businesses across Arlington with expert landscaping.',
+    neighborhoods: ['Entertainment District', 'Parks Mall', 'UTA Area']
+  },
+  {
+    slug: 'dallas',
+    name: 'Dallas',
+    county: 'Dallas',
+    distance: 25,
+    population: '1,300,000+',
+    description: 'Premier commercial landscaping for Dallas businesses, from Uptown to Downtown.',
+    neighborhoods: ['Uptown', 'Downtown', 'Deep Ellum', 'Preston Hollow']
+  },
+  {
+    slug: 'fort-worth',
+    name: 'Fort Worth',
+    county: 'Tarrant',
+    distance: 20,
+    population: '935,000+',
+    description: 'Professional landscape services for Fort Worth\'s diverse commercial sectors.',
+    neighborhoods: ['Downtown', 'Stockyards', 'Cultural District', 'Alliance']
+  },
+  {
+    slug: 'waxahachie',
+    name: 'Waxahachie',
+    county: 'Ellis',
+    distance: 40,
+    population: '37,000+',
+    description: 'Serving commercial properties in Waxahachie with quality landscape maintenance.',
+    neighborhoods: ['Downtown', 'Hwy 77', 'Broadhead Rd']
+  },
+  {
+    slug: 'weatherford',
+    name: 'Weatherford',
+    county: 'Parker',
+    distance: 45,
+    population: '33,000+',
+    description: 'Landscape solutions for businesses in Weatherford and Parker County.',
+    neighborhoods: ['Downtown', 'Main St', 'Hudson Oaks']
+  },
+  {
+    slug: 'aledo',
+    name: 'Aledo',
+    county: 'Parker',
+    distance: 35,
+    population: '4,000+',
+    description: 'Commercial landscaping for the growing Aledo community.',
+    neighborhoods: ['FM 1187', 'Kelly Rd', 'Bailey Ranch']
+  },
+  {
+    slug: 'mesquite',
+    name: 'Mesquite',
+    county: 'Dallas',
+    distance: 35,
+    population: '140,000+',
+    description: 'Professional grounds maintenance for Mesquite businesses.',
+    neighborhoods: ['Town East', 'Galloway', 'Peachtree']
+  },
+  {
+    slug: 'midlothian',
+    name: 'Midlothian',
+    county: 'Ellis',
+    distance: 30,
+    population: '35,000+',
+    description: 'Serving the commercial landscaping needs of Midlothian.',
+    neighborhoods: ['Midlothian Pkwy', 'Hwy 287', 'FM 663']
+  },
+  {
+    slug: 'burleson',
+    name: 'Burleson',
+    county: 'Johnson',
+    distance: 30,
+    population: '48,000+',
+    description: 'Expert landscaping for Burleson commercial properties.',
+    neighborhoods: ['Wilshire Blvd', 'Alsbury', 'Old Town']
+  },
+  {
+    slug: 'irving',
+    name: 'Irving',
+    county: 'Dallas',
+    distance: 15,
+    population: '256,000+',
+    description: 'Specialized landscaping for Las Colinas and Irving businesses.',
+    neighborhoods: ['Las Colinas', 'Valley Ranch', 'Airport Area']
+  },
+  {
+    slug: 'university-park',
+    name: 'University Park',
+    county: 'Dallas',
+    distance: 25,
+    population: '25,000+',
+    description: 'Premium landscape services for University Park commercial areas.',
+    neighborhoods: ['Snider Plaza', 'Preston Center', 'SMU Area']
+  },
+  {
+    slug: 'keller',
+    name: 'Keller',
+    county: 'Tarrant',
+    distance: 5,
+    population: '50,000+',
+    description: 'Serving Keller businesses with beautiful landscape design and maintenance.',
+    neighborhoods: ['Keller Pkwy', 'Old Town Keller', 'Rufe Snow']
+  },
+  {
+    slug: 'carrollton',
+    name: 'Carrollton',
+    county: 'Dallas',
+    distance: 18,
+    population: '133,000+',
+    description: 'Commercial landscape management for Carrollton properties.',
+    neighborhoods: ['Belt Line', 'Josey Lane', 'Trinity Mills']
+  },
+  {
+    slug: 'allen',
+    name: 'Allen',
+    county: 'Collin',
+    distance: 30,
+    population: '105,000+',
+    description: 'Landscape services for Allen\'s retail centers and office parks.',
+    neighborhoods: ['Watters Creek', 'Allen Premium Outlets', 'McDermott']
+  },
+  {
+    slug: 'lewisville',
+    name: 'Lewisville',
+    county: 'Denton',
+    distance: 15,
+    population: '106,000+',
+    description: 'Professional landscaping for Lewisville businesses.',
+    neighborhoods: ['Vista Ridge', 'Old Town', 'Main St']
+  },
+  {
+    slug: 'the-colony',
+    name: 'The Colony',
+    county: 'Denton',
+    distance: 20,
+    population: '45,000+',
+    description: 'Serving The Colony and Grandscape area with premier landscaping.',
+    neighborhoods: ['Grandscape', 'Main St', 'Austin Ranch']
+  },
+  {
+    slug: 'saginaw',
+    name: 'Saginaw',
+    county: 'Tarrant',
+    distance: 15,
+    population: '23,000+',
+    description: 'Commercial grounds care for Saginaw businesses.',
+    neighborhoods: ['Main St', 'Blue Mound', 'Bailey Boswell']
+  },
+  {
+    slug: 'pantego',
+    name: 'Pantego',
+    county: 'Tarrant',
+    distance: 18,
+    population: '2,500+',
+    description: 'Serving the commercial community of Pantego.',
+    neighborhoods: ['Park Row', 'Pioneer Pkwy', 'Bowen']
+  },
+  {
+    slug: 'coppell',
+    name: 'Coppell',
+    county: 'Dallas',
+    distance: 12,
+    population: '42,000+',
+    description: 'High-quality landscaping for Coppell corporate and retail areas.',
+    neighborhoods: ['Denton Tap', 'Sandy Lake', 'Freeport']
+  },
+  {
+    slug: 'flower-mound',
+    name: 'Flower Mound',
+    county: 'Denton',
+    distance: 14,
+    population: '79,000+',
+    description: 'Commercial landscaping for Flower Mound\'s growing business districts.',
+    neighborhoods: ['Lakeside', 'Cross Timbers', 'Long Prairie']
+  },
+  {
+    slug: 'addison',
+    name: 'Addison',
+    county: 'Dallas',
+    distance: 20,
+    population: '16,000+',
+    description: 'Specialized services for Addison\'s restaurants, hotels, and offices.',
+    neighborhoods: ['Belt Line', 'Addison Circle', 'Midway']
+  },
+  {
+    slug: 'richardson',
+    name: 'Richardson',
+    county: 'Dallas',
+    distance: 25,
+    population: '119,000+',
+    description: 'Serving the Telecom Corridor and Richardson businesses.',
+    neighborhoods: ['Telecom Corridor', 'CityLine', 'Coit Rd']
+  },
+  {
+    slug: 'prosper',
+    name: 'Prosper',
+    county: 'Collin',
+    distance: 35,
+    population: '31,000+',
+    description: 'Landscape services for Prosper\'s new commercial developments.',
+    neighborhoods: ['Preston Rd', 'US 380', 'Downtown Prosper']
+  },
+  {
+    slug: 'garland',
+    name: 'Garland',
+    county: 'Dallas',
+    distance: 30,
+    population: '240,000+',
+    description: 'Commercial landscaping for Garland\'s industrial and retail areas.',
+    neighborhoods: ['Firewheel', 'Downtown Garland', 'Jupiter Rd']
+  },
+  {
+    slug: 'highland-park',
+    name: 'Highland Park',
+    county: 'Dallas',
+    distance: 25,
+    population: '8,000+',
+    description: 'Exclusive commercial landscaping for Highland Park Village and surrounds.',
+    neighborhoods: ['Highland Park Village', 'Preston Rd', 'Mockingbird']
+  },
+  {
+    slug: 'rockwall',
+    name: 'Rockwall',
+    county: 'Rockwall',
+    distance: 45,
+    population: '47,000+',
+    description: 'Serving Rockwall businesses with lakeside landscape solutions.',
+    neighborhoods: ['The Harbor', 'Ridge Rd', 'I-30']
   }
 ];
 

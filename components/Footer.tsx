@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail, Clock, Facebook, Instagram, Star } from 'lucide-react';
+import { Phone, Mail, Clock, Facebook, Instagram, Star, TreeDeciduous } from 'lucide-react';
 import { businessInfo } from '@/lib/seo';
 import { cities } from '@/data/cities';
 import { services } from '@/data/services';
@@ -14,7 +14,7 @@ export default function Footer() {
             Ready to Transform Your Outdoor Space?
           </h2>
           <p className="text-forest-100 text-lg mb-8 max-w-2xl mx-auto">
-            Get a free consultation and estimate for your landscaping project. We serve Colleyville and surrounding communities.
+            Get a free consultation and estimate for your commercial landscaping project. We serve Dallas, Fort Worth, and the entire Metroplex.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact" className="btn-primary bg-white !text-forest-800 hover:!bg-stone-100">
@@ -37,17 +37,15 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="mb-6 flex items-center gap-3">
-              <img
-                src="/logo/colleyville-icon.png"
-                alt=""
-                className="h-12 w-auto object-contain"
-              />
+              <div className="bg-forest-800 p-2 rounded-lg">
+                <TreeDeciduous className="w-6 h-6 text-white" />
+              </div>
               <span className="font-display font-bold text-2xl text-white">
-                Colleyville Landscaping
+                DFW Commercial Landscaping
               </span>
             </div>
             <p className="text-stone-400 mb-6 leading-relaxed">
-              Premier landscaping and hardscaping services in Colleyville, Texas and surrounding communities. Quality craftsmanship, attention to detail, and customer satisfaction guaranteed.
+              Premier commercial landscaping and grounds maintenance services in the Dallas-Fort Worth Metroplex. Quality craftsmanship and professional service guaranteed.
             </p>
             <div className="flex items-center gap-2 mb-4">
               {[...Array(5)].map((_, i) => (
@@ -80,7 +78,7 @@ export default function Footer() {
               {services.slice(0, 10).map((service) => (
                 <li key={service.slug}>
                   <Link 
-                    href={`/cities/colleyville/services/${service.slug}`}
+                    href={`/cities/dallas/services/${service.slug}`}
                     className="text-stone-400 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
@@ -120,17 +118,6 @@ export default function Footer() {
                     <Phone size={18} className="text-forest-400" />
                   </div>
                   <span>{businessInfo.phone}</span>
-                </a>
-              </li>
-              <li>
-                <a 
-                  href={`mailto:${businessInfo.email}`} 
-                  className="flex items-center gap-3 text-stone-400 hover:text-white transition-colors"
-                >
-                  <div className="w-10 h-10 bg-forest-800 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail size={18} className="text-forest-400" />
-                  </div>
-                  <span className="break-all">{businessInfo.email}</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-stone-400">

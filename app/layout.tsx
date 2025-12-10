@@ -6,37 +6,37 @@ import { businessInfo, generateLocalBusinessSchema, generateOrganizationSchema, 
 
 export const metadata: Metadata = {
   title: {
-    default: `${businessInfo.name} | Premier Landscaping & Hardscaping in Colleyville, TX`,
+    default: `${businessInfo.name} | Premier Commercial Landscaping in DFW`,
     template: `%s | ${businessInfo.name}`
   },
-  description: 'Professional landscaping, hardscaping, and outdoor living services in Colleyville, Texas. Expert landscape design, paver installation, irrigation, tree planting, mulch, sod, and more. Serving Colleyville, Southlake, Keller, Grapevine, and surrounding DFW areas. Call (214) 833-6805 for a free estimate!',
-  keywords: 'landscaping Colleyville TX, hardscaping, landscape design, paver installation, outdoor living, irrigation, tree planting, mulch installation, sod installation, French drain, outdoor lighting, fencing, pergolas, retaining walls, Southlake landscaping, Keller landscaping, DFW landscaping, landscaping near me, best landscaper Colleyville',
-  metadataBase: new URL('https://colleyvillelandscaping.com'),
+  description: 'Professional commercial landscaping, hardscaping, and grounds maintenance services in Dallas-Fort Worth. Expert landscape design, irrigation, tree care, and large-scale installations. Serving Dallas, Fort Worth, Frisco, Plano, and surrounding areas. Call 214-506-3983.',
+  keywords: 'commercial landscaping DFW, commercial grounds maintenance, landscape design Dallas, irrigation systems Fort Worth, commercial tree trimming, HOA landscaping, retail center maintenance, office park landscaping',
+  metadataBase: new URL('https://dfwcommerciallandscaping.com'),
   alternates: {
-    canonical: 'https://colleyvillelandscaping.com',
+    canonical: 'https://dfwcommerciallandscaping.com',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://colleyvillelandscaping.com',
+    url: 'https://dfwcommerciallandscaping.com',
     siteName: businessInfo.name,
-    title: `${businessInfo.name} | Premier Landscaping in Colleyville, TX`,
-    description: 'Transform your outdoor space with expert landscaping and hardscaping services. 15+ years experience. 5-star rated. Free estimates. Serving Colleyville and surrounding DFW communities.',
+    title: `${businessInfo.name} | Premier Commercial Landscaping in DFW`,
+    description: 'Professional commercial landscaping and grounds maintenance for businesses in DFW. Expert design, installation, and care.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Colleyville Landscaping - Professional Landscaping Services in Colleyville, TX'
+        alt: 'DFW Commercial Landscaping - Professional Services'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${businessInfo.name} | Premier Landscaping in Colleyville, TX`,
-    description: 'Transform your outdoor space with expert landscaping and hardscaping services. Free estimates!',
+    title: `${businessInfo.name} | Premier Commercial Landscaping in DFW`,
+    description: 'Professional commercial landscaping and grounds maintenance services in DFW.',
     images: ['/og-image.jpg'],
-    creator: '@colleyvillelandscaping'
+    creator: '@dfwcommerciallandscaping'
   },
   robots: {
     index: true,
@@ -49,15 +49,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
   category: 'Landscaping Services',
   other: {
     'geo.region': 'US-TX',
-    'geo.placename': 'Colleyville',
-    'geo.position': '32.8818;-97.1681',
-    'ICBM': '32.8818, -97.1681',
+    'geo.placename': 'Dallas',
+    'geo.position': '32.7767;-96.7970',
+    'ICBM': '32.7767, -96.7970',
   }
 };
 
@@ -77,9 +74,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#0c4a6e" />
         <meta name="format-detection" content="telephone=yes" />
         <meta name="geo.region" content="US-TX" />
-        <meta name="geo.placename" content="Colleyville, Texas" />
-        <meta name="geo.position" content="32.8818;-97.1681" />
-        <meta name="ICBM" content="32.8818, -97.1681" />
+        <meta name="geo.placename" content="Dallas, Texas" />
+        <meta name="geo.position" content="32.7767;-96.7970" />
+        <meta name="ICBM" content="32.7767, -96.7970" />
         
         {/* Organization Schema */}
         <script

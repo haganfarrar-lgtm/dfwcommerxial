@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown, TreeDeciduous } from 'lucide-react';
 import { businessInfo } from '@/lib/seo';
 import { getServicesByCategory } from '@/data/services';
 import { cities } from '@/data/cities';
@@ -48,7 +48,7 @@ export default function Header() {
       <div className="bg-[#f5f5f5] py-2 px-4 hidden md:block border-b border-stone-200">
         <div className="container-custom flex justify-between items-center text-sm">
           <div className="flex items-center gap-6 text-forest-700">
-            <span>Serving Colleyville & Surrounding DFW Areas</span>
+            <span>Serving Dallas, Fort Worth & Surrounding Areas</span>
             <span className="text-forest-300">|</span>
             <span>{businessInfo.hours.weekday}</span>
           </div>
@@ -67,13 +67,11 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center group gap-3" onClick={closeAllDropdowns}>
-            <img
-              src="/logo/colleyville-icon.png"
-              alt=""
-              className="h-16 w-auto object-contain"
-            />
+            <div className="bg-forest-700 p-2 rounded-lg group-hover:bg-forest-800 transition-colors">
+              <TreeDeciduous className="w-8 h-8 text-white" />
+            </div>
             <span className="font-display font-bold text-2xl text-forest-900 group-hover:text-forest-700 transition-colors">
-              Colleyville Landscaping
+              DFW Commercial Landscaping
             </span>
           </Link>
 
@@ -111,7 +109,7 @@ export default function Header() {
                           {getServicesByCategory(cat.category).slice(0, 6).map((service) => (
                             <li key={service.slug}>
                               <Link 
-                                href={`/cities/colleyville/services/${service.slug}`}
+                                href={`/cities/dallas/services/${service.slug}`}
                                 className="text-sm text-stone-600 hover:text-forest-600 transition-colors block py-1 hover:pl-1"
                                 onClick={closeAllDropdowns}
                               >
@@ -162,7 +160,7 @@ export default function Header() {
                       ))}
                     </div>
                     <Link 
-                      href="/cities/colleyville" 
+                      href="/cities/dallas" 
                       className="block mt-4 pt-4 border-t border-stone-200 text-forest-700 font-medium hover:text-forest-500 text-center"
                       onClick={closeAllDropdowns}
                     >
@@ -231,7 +229,7 @@ export default function Header() {
                           {getServicesByCategory(cat.category).slice(0, 4).map((service) => (
                             <Link
                               key={service.slug}
-                              href={`/cities/colleyville/services/${service.slug}`}
+                              href={`/cities/dallas/services/${service.slug}`}
                               className="text-sm text-stone-600 hover:text-forest-600 block py-1"
                               onClick={() => setIsOpen(false)}
                             >
@@ -270,7 +268,7 @@ export default function Header() {
                       ))}
                     </div>
                     <Link
-                      href="/cities/colleyville"
+                      href="/cities/dallas"
                       className="block mt-3 pt-3 border-t border-stone-200 text-center text-sm text-forest-700 font-medium"
                       onClick={() => setIsOpen(false)}
                     >

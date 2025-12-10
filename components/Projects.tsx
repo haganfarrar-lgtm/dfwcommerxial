@@ -5,50 +5,50 @@ import { ArrowRight, MapPin } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Modern Patio Design',
+    title: 'Corporate Campus Design',
+    location: 'Plano, TX',
+    category: 'Commercial Landscaping',
+    description: 'Complete landscape design and installation for corporate headquarters.',
+    image: '/images/commercial/landscape design/Commercial-Landscape-Design-Alexandria-VA.jpg',
+  },
+  {
+    title: 'Retail Center Maintenance',
+    location: 'Frisco, TX',
+    category: 'Maintenance',
+    description: 'Weekly grounds maintenance and seasonal color for shopping center.',
+    image: '/images/commercial/commercial landscaping/commercial-landscaping.jpg',
+  },
+  {
+    title: 'Office Park Tree Planting',
+    location: 'Irving, TX',
+    category: 'Tree Services',
+    description: 'Large scale shade tree installation for parking lot compliance.',
+    image: '/images/commercial/commercial tree planting/plant-commercial.jpg',
+  },
+  {
+    title: 'HOA Irrigation Upgrade',
     location: 'Southlake, TX',
-    category: 'Hardscaping',
-    description: 'Custom paver patio with outdoor kitchen and fire pit',
-    image: '/images/services/pavers/Unknown.jpeg',
+    category: 'Irrigation',
+    description: 'Smart irrigation system installation for large residential community.',
+    image: '/images/commercial/commercial irrigation/commercial-irrigation-system.jpg',
   },
   {
-    title: 'Complete Landscape Renovation',
-    location: 'Keller, TX',
-    category: 'Landscaping',
-    description: 'Full property transformation with new plantings and irrigation',
-    image: '/images/services/landscape-design/images.jpeg',
+    title: 'Commercial Mulch Install',
+    location: 'Fort Worth, TX',
+    category: 'Maintenance',
+    description: 'Bulk mulch installation for business park landscape beds.',
+    image: '/images/commercial/commercial mulch install/commercial-mulch.jpg',
   },
   {
-    title: 'Outdoor Living Space',
-    location: 'Colleyville, TX',
-    category: 'Custom Design',
-    description: 'Pergola with integrated lighting and stone fireplace',
-    image: '/images/services/hardscaping/Unknown.jpeg',
-  },
-  {
-    title: 'Stone Pathway Installation',
-    location: 'Westlake, TX',
-    category: 'Hardscaping',
-    description: 'Natural flagstone pathway with landscape lighting',
-    image: '/images/services/flagstone/Unknown.jpeg',
-  },
-  {
-    title: 'Custom Fire Pit Area',
-    location: 'Trophy Club, TX',
-    category: 'Outdoor Living',
-    description: 'Stone fire pit with built-in seating and paver patio',
-    image: '/images/services/hardscaping/Unknown-1.jpeg',
-  },
-  {
-    title: 'Front Yard Transformation',
-    location: 'Colleyville, TX',
-    category: 'Landscaping',
-    description: 'Curb appeal upgrade with new beds, sod, and lighting',
-    image: '/images/services/sod-installation/Unknown.jpeg',
+    title: 'New Development Sod',
+    location: 'Dallas, TX',
+    category: 'Commercial Landscaping',
+    description: 'Large area sod installation for new commercial construction.',
+    image: '/images/commercial/commercial sod/SOD-INSTALTIION.jpg',
   },
 ];
 
-const categories = ['All', 'Landscaping', 'Hardscaping', 'Custom Design', 'Outdoor Living'];
+const categories = ['All', 'Commercial Landscaping', 'Maintenance', 'Tree Services', 'Irrigation'];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -67,7 +67,7 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="text-lg text-stone-600">
-            See how we've transformed outdoor spaces across Southlake and the surrounding DFW communities.
+            See how we help businesses across DFW maintain professional and inviting properties.
           </p>
         </div>
 
@@ -145,6 +145,3 @@ export default function Projects() {
     </section>
   );
 }
-
-
-

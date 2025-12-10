@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Clock } from 'lucide-react';
 import { businessInfo } from '@/lib/seo';
 import { useEffect } from 'react';
 
@@ -9,7 +9,7 @@ interface ContactFormProps {
   serviceName?: string;
 }
 
-export default function ContactForm({ cityName = 'Southlake', serviceName }: ContactFormProps) {
+export default function ContactForm({ cityName = 'DFW', serviceName }: ContactFormProps) {
   useEffect(() => {
     // Load GoHighLevel form script
     const script = document.createElement('script');
@@ -36,7 +36,7 @@ export default function ContactForm({ cityName = 'Southlake', serviceName }: Con
             Get Your Free Quote
           </h2>
           <p className="text-lg text-stone-600">
-            Ready to transform your outdoor space? Fill out the form below or give us a call. We'll provide a free, no-obligation estimate for your {cityName} property.
+            Ready to transform your commercial property? Fill out the form below or give us a call. We'll provide a free, no-obligation estimate for your {cityName} business.
           </p>
         </div>
 
@@ -58,21 +58,6 @@ export default function ContactForm({ cityName = 'Southlake', serviceName }: Con
                     <p className="text-sm text-stone-500 mb-1">Phone</p>
                     <p className="font-semibold text-forest-900 group-hover:text-forest-700 transition-colors">
                       {businessInfo.phone}
-                    </p>
-                  </div>
-                </a>
-
-                <a 
-                  href={`mailto:${businessInfo.email}`}
-                  className="flex items-start gap-4 group"
-                >
-                  <div className="w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-forest-200 transition-colors">
-                    <Mail className="w-5 h-5 text-forest-700" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-stone-500 mb-1">Email</p>
-                    <p className="font-semibold text-forest-900 group-hover:text-forest-700 transition-colors break-all">
-                      {businessInfo.email}
                     </p>
                   </div>
                 </a>

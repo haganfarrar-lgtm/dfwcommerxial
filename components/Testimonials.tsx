@@ -5,52 +5,52 @@ import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Sarah Mitchell',
-    location: 'Southlake, TX',
+    name: 'Robert Davis',
+    location: 'Property Manager, Plano',
     rating: 5,
-    text: 'Absolutely transformed our backyard! The team was professional, punctual, and the paver patio they installed exceeded our expectations. Our neighbors can\'t stop complimenting our new outdoor space. Worth every penny!',
-    project: 'Paver Patio Installation',
+    text: 'DFW Commercial Landscaping has been maintaining our office park for two years. Their attention to detail and responsiveness is unmatched. The property always looks professional and tenants appreciate the well-kept grounds.',
+    project: 'Commercial Maintenance',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop'
+  },
+  {
+    name: 'Sarah Jenkins',
+    location: 'HOA President, Southlake',
+    rating: 5,
+    text: 'We switched to them for our community landscaping and saw an immediate improvement. They handle everything from mowing to irrigation repairs. The communication with our board is excellent.',
+    project: 'HOA Landscape Management',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop'
   },
   {
     name: 'Michael Thompson',
-    location: 'Keller, TX',
+    location: 'Business Owner, Frisco',
     rating: 5,
-    text: 'We hired them for a complete landscape renovation. From the initial design to the final walkthrough, everything was handled professionally. The results are stunning and our property value has definitely increased.',
-    project: 'Complete Landscape Design',
+    text: 'They transformed the front of our retail center with new beds and trees. It completely changed the look of our business. Highly recommend for any commercial design and installation work.',
+    project: 'Commercial Landscape Design',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop'
   },
   {
-    name: 'Jennifer Rodriguez',
-    location: 'Colleyville, TX',
-    rating: 5,
-    text: 'Best landscaping company in the area! They installed our irrigation system and it works flawlessly. Great communication throughout the project and fair pricing. Highly recommend to anyone in the DFW area!',
-    project: 'Irrigation Installation',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop'
-  },
-  {
     name: 'David Chen',
-    location: 'Trophy Club, TX',
+    location: 'Facility Manager, Irving',
     rating: 5,
-    text: 'The outdoor fireplace they built for us is the centerpiece of our backyard. Quality workmanship and attention to detail. We use it year-round and it\'s become our favorite gathering spot for family and friends.',
-    project: 'Outdoor Fireplace',
+    text: 'Reliable, professional, and proactive. They identify issues with our irrigation and trees before they become big problems. A true partner in facility management.',
+    project: 'Irrigation & Tree Care',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop'
   },
   {
     name: 'Amanda Foster',
-    location: 'Colleyville, TX',
+    location: 'Real Estate Developer, Dallas',
     rating: 5,
-    text: 'Professional from start to finish. They helped us design a low-maintenance landscape that looks beautiful year-round. The team was respectful of our property and cleaned up thoroughly each day. A+ service!',
-    project: 'Landscape Design & Installation',
+    text: 'We use DFW Commercial Landscaping for all our new development projects. They handle sod, irrigation, and planting efficiently and on schedule. Great team to work with.',
+    project: 'New Construction Landscaping',
     image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop'
   },
   {
-    name: 'Robert Williams',
-    location: 'Westlake, TX',
+    name: 'James Wilson',
+    location: 'Restaurant Owner, Fort Worth',
     rating: 5,
-    text: 'We\'ve used Southlake Landscaping for multiple projects over the years. Consistent quality, reliable service, and they stand behind their work. Wouldn\'t trust anyone else with our property.',
-    project: 'Ongoing Maintenance',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop'
+    text: 'Our outdoor patio area is a key part of our business, and they keep it looking pristine. The seasonal flowers and planter maintenance are always perfect.',
+    project: 'Commercial Enhancements',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop'
   }
 ];
 
@@ -89,7 +89,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-stone-300">
-            Don't just take our word for it. Here's what homeowners throughout the DFW area have to say about our landscaping services.
+            Trusted by businesses and property managers across the DFW Metroplex.
           </p>
         </div>
 
@@ -158,8 +158,8 @@ export default function Testimonials() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-forest-800">
           <div className="text-center">
-            <p className="font-display text-4xl md:text-5xl font-bold text-forest-400">500+</p>
-            <p className="text-stone-400 mt-2">Happy Clients</p>
+            <p className="font-display text-4xl md:text-5xl font-bold text-forest-400">200+</p>
+            <p className="text-stone-400 mt-2">Commercial Clients</p>
           </div>
           <div className="text-center">
             <p className="font-display text-4xl md:text-5xl font-bold text-forest-400">15+</p>
@@ -178,6 +178,3 @@ export default function Testimonials() {
     </section>
   );
 }
-
-
-

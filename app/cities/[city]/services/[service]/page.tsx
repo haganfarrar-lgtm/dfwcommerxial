@@ -11,8 +11,9 @@ import { cities, getCityBySlug, getNearbyCities, getAllCitySlugs } from '@/data/
 import { services, getServiceBySlug, getAllServiceSlugs, getServicesByCategory } from '@/data/services';
 import { businessInfo, generateMetadata as genMeta, generateServiceSchema, generateBreadcrumbSchema } from '@/lib/seo';
 
+// Service Page Component
 interface ServicePageProps {
-  params: { city: string; service: string };
+  params: Promise<{ city: string; service: string }>;
 }
 
 export async function generateStaticParams() {
@@ -31,8 +32,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
-  const city = getCityBySlug(params.city);
-  const service = getServiceBySlug(params.service);
+  const { city: citySlug, service: serviceSlug } = await params;
+  const city = getCityBySlug(citySlug);
+  const service = getServiceBySlug(serviceSlug);
   
   if (!city || !service) return {};
 
@@ -51,9 +53,11 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   });
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
-  const city = getCityBySlug(params.city);
-  const service = getServiceBySlug(params.service);
+export default async function ServicePage({ params }: ServicePageProps) {
+  const { city: citySlug, service: serviceSlug } = await params;
+  console.log('Rendering Service Page:', { citySlug, serviceSlug });
+  const city = getCityBySlug(citySlug);
+  const service = getServiceBySlug(serviceSlug);
   
   if (!city || !service) {
     notFound();
@@ -357,6 +361,3 @@ export default function ServicePage({ params }: ServicePageProps) {
     </>
   );
 }
-
-
-

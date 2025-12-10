@@ -1,29 +1,29 @@
 import { Metadata } from 'next';
 
 export const businessInfo = {
-  name: 'Colleyville Landscaping',
-  phone: '(214) 833-6805',
-  email: 'info@colleyvillelandscaping.com',
+  name: 'DFW Commercial Landscaping',
+  phone: '214-506-3983',
+  email: '',
   address: {
-    street: '123 Main Street',
-    city: 'Colleyville',
+    street: '',
+    city: 'Dallas',
     state: 'TX',
-    zip: '76034',
-    full: '123 Main Street, Colleyville, TX 76034'
+    zip: '75201',
+    full: 'Dallas-Fort Worth Metroplex'
   },
   hours: {
     weekday: 'Open 7 Days a Week: 7:00 AM - 8:00 PM',
-    saturday: '',
-    sunday: ''
+    saturday: '7:00 AM - 8:00 PM',
+    sunday: '7:00 AM - 8:00 PM'
   },
   social: {
-    facebook: 'https://facebook.com/colleyvillelandscaping',
-    instagram: 'https://instagram.com/colleyvillelandscaping',
-    google: 'https://g.page/colleyvillelandscaping'
+    facebook: '#',
+    instagram: '#',
+    google: '#'
   },
-  serviceArea: 'Colleyville, Grapevine, Southlake, Keller, Trophy Club, Westlake, and surrounding DFW communities',
-  tagline: 'Premier Landscaping & Hardscaping Services in Colleyville, TX',
-  description: 'Professional landscaping, hardscaping, and outdoor living services in Colleyville, Texas and surrounding areas. Custom design, installation, and maintenance for residential and commercial properties.',
+  serviceArea: 'Dallas, Fort Worth, Colleyville, Southlake, Frisco, Plano, and the entire DFW Metroplex',
+  tagline: 'Premier Commercial Landscaping Services in DFW',
+  description: 'Professional commercial landscaping, hardscaping, and grounds maintenance for businesses in the Dallas-Fort Worth area. Expert tree trimming, irrigation, and large-scale installations.',
   yearsInBusiness: 15,
   projectsCompleted: 1000,
   foundingYear: 2009,
@@ -37,32 +37,27 @@ export const businessInfo = {
 export const generateOrganizationSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://colleyvillelandscaping.com/#organization',
+  '@id': 'https://dfwcommerciallandscaping.com/#organization',
   name: businessInfo.name,
-  url: 'https://colleyvillelandscaping.com',
+  url: 'https://dfwcommerciallandscaping.com',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://colleyvillelandscaping.com/logo/colleyville-logo.png',
+    url: 'https://dfwcommerciallandscaping.com/logo/logo.png',
     width: 400,
     height: 400
   },
-  image: 'https://colleyvillelandscaping.com/og-image.jpg',
+  image: 'https://dfwcommerciallandscaping.com/og-image.jpg',
   description: businessInfo.description,
   telephone: businessInfo.phone,
-  email: businessInfo.email,
   foundingDate: businessInfo.foundingYear.toString(),
   areaServed: {
     '@type': 'State',
     name: 'Texas',
     containsPlace: [
-      { '@type': 'City', name: 'Colleyville' },
-      { '@type': 'City', name: 'Grapevine' },
-      { '@type': 'City', name: 'Southlake' },
-      { '@type': 'City', name: 'Keller' },
-      { '@type': 'City', name: 'Trophy Club' },
-      { '@type': 'City', name: 'Westlake' },
-      { '@type': 'City', name: 'Roanoke' },
-      { '@type': 'City', name: 'Flower Mound' }
+      { '@type': 'City', name: 'Dallas' },
+      { '@type': 'City', name: 'Fort Worth' },
+      { '@type': 'City', name: 'Frisco' },
+      { '@type': 'City', name: 'Plano' }
     ]
   },
   sameAs: [
@@ -76,20 +71,12 @@ export const generateOrganizationSchema = () => ({
 export const generateWebSiteSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': 'https://colleyvillelandscaping.com/#website',
-  url: 'https://colleyvillelandscaping.com',
+  '@id': 'https://dfwcommerciallandscaping.com/#website',
+  url: 'https://dfwcommerciallandscaping.com',
   name: businessInfo.name,
   description: businessInfo.description,
   publisher: {
-    '@id': 'https://colleyvillelandscaping.com/#organization'
-  },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://colleyvillelandscaping.com/search?q={search_term_string}'
-    },
-    'query-input': 'required name=search_term_string'
+    '@id': 'https://dfwcommerciallandscaping.com/#organization'
   },
   inLanguage: 'en-US'
 });
@@ -101,7 +88,7 @@ export const generateAggregateRatingSchema = () => ({
   itemReviewed: {
     '@type': 'LocalBusiness',
     name: businessInfo.name,
-    image: 'https://colleyvillelandscaping.com/logo/colleyville-logo.png'
+    image: 'https://dfwcommerciallandscaping.com/logo/logo.png'
   },
   ratingValue: businessInfo.rating.value.toString(),
   bestRating: '5',
@@ -122,7 +109,7 @@ export const generateMetadata = ({
   path?: string;
   image?: string;
 }): Metadata => {
-  const url = `https://colleyvillelandscaping.com${path}`;
+  const url = `https://dfwcommerciallandscaping.com${path}`;
   
   return {
     title: `${title} | ${businessInfo.name}`,
@@ -165,15 +152,14 @@ export const generateLocalBusinessSchema = (city?: string) => {
   return {
     '@context': 'https://schema.org',
     '@type': 'LandscapingBusiness',
-    '@id': 'https://colleyvillelandscaping.com/#localbusiness',
+    '@id': 'https://dfwcommerciallandscaping.com/#localbusiness',
     name: businessInfo.name,
     image: [
-      'https://colleyvillelandscaping.com/logo/colleyville-logo.png',
-      'https://colleyvillelandscaping.com/og-image.jpg'
+      'https://dfwcommerciallandscaping.com/logo/logo.png',
+      'https://dfwcommerciallandscaping.com/og-image.jpg'
     ],
-    url: 'https://colleyvillelandscaping.com',
+    url: 'https://dfwcommerciallandscaping.com',
     telephone: businessInfo.phone,
-    email: businessInfo.email,
     description: businessInfo.description,
     slogan: businessInfo.tagline,
     foundingDate: businessInfo.foundingYear.toString(),
@@ -186,8 +172,8 @@ export const generateLocalBusinessSchema = (city?: string) => {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 32.8818,
-      longitude: -97.1681
+      latitude: 32.7767,
+      longitude: -96.7970
     },
     openingHoursSpecification: [
       {
@@ -213,29 +199,19 @@ export const generateLocalBusinessSchema = (city?: string) => {
     paymentAccepted: 'Cash, Credit Card, Check',
     currenciesAccepted: 'USD',
     areaServed: [
-      { '@type': 'City', name: 'Colleyville', '@id': 'https://en.wikipedia.org/wiki/Colleyville,_Texas' },
-      { '@type': 'City', name: 'Grapevine' },
-      { '@type': 'City', name: 'Southlake' },
-      { '@type': 'City', name: 'Keller' },
-      { '@type': 'City', name: 'Trophy Club' },
-      { '@type': 'City', name: 'Westlake' },
-      { '@type': 'City', name: 'Roanoke' },
-      { '@type': 'City', name: 'Flower Mound' },
-      { '@type': 'City', name: 'Coppell' },
-      { '@type': 'City', name: 'Frisco' }
+      { '@type': 'City', name: 'Dallas' },
+      { '@type': 'City', name: 'Fort Worth' },
+      { '@type': 'City', name: 'Colleyville' },
+      { '@type': 'City', name: 'Frisco' },
+      { '@type': 'City', name: 'Plano' }
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Landscaping Services',
+      name: 'Commercial Landscaping Services',
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Landscape Design' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hardscaping' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Paver Installation' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Irrigation Systems' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tree Planting' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sod Installation' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Outdoor Lighting' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'French Drain Installation' } }
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Landscape Design' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Maintenance' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Tree Trimming' } }
       ]
     }
   };
@@ -253,11 +229,11 @@ export const generateServiceSchema = (service: { name: string; description: stri
     },
     areaServed: {
       '@type': 'City',
-      name: city || 'Colleyville',
-      '@id': `https://en.wikipedia.org/wiki/${city || 'Colleyville'},_Texas`
+      name: city || 'Dallas',
+      '@id': `https://en.wikipedia.org/wiki/${city || 'Dallas'},_Texas`
     },
     description: service.description,
-    url: `https://colleyvillelandscaping.com/cities/${city?.toLowerCase().replace(/ /g, '-') || 'colleyville'}/services/${service.slug}`
+    url: `https://dfwcommerciallandscaping.com/cities/${city?.toLowerCase().replace(/ /g, '-') || 'dallas'}/services/${service.slug}`
   };
 };
 
@@ -269,7 +245,7 @@ export const generateBreadcrumbSchema = (items: { name: string; url: string }[])
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://colleyvillelandscaping.com${item.url}`
+      item: `https://dfwcommerciallandscaping.com${item.url}`
     }))
   };
 };

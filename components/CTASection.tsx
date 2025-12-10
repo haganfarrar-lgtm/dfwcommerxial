@@ -11,7 +11,7 @@ interface CTASectionProps {
 export default function CTASection({ 
   title = "Ready to Transform Your Outdoor Space?",
   subtitle = "Get a free consultation and estimate for your landscaping project. Our team is ready to bring your vision to life.",
-  cityName = "Southlake"
+  cityName = "DFW"
 }: CTASectionProps) {
   return (
     <section className="relative py-20 overflow-hidden">
