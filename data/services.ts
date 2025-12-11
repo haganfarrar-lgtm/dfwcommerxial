@@ -181,7 +181,7 @@ export const services: Service[] = [
       'Clean appearance'
     ],
     category: 'landscaping',
-    icon: 'Grass',
+    icon: 'Sprout',
     heroImage: '/images/commercial/turf/commercial-turf-installation-walkway.jpg',
     images: [
       "/images/commercial/turf/artificial-turf-500x500.jpg.webp",

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Palette, Flower2, TreeDeciduous, Sprout, Layers, Circle, Leaf, Maximize, LayoutGrid, Grid3x3, Square, Pentagon, RectangleHorizontal, Grid2x2, Building, Flame, Home, PanelTop, Droplets, ArrowDownToLine, TrendingDown, Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles, Scissors, Grass } from 'lucide-react';
+import { ArrowRight, Palette, Flower2, TreeDeciduous, Sprout, Layers, Circle, Leaf, Maximize, LayoutGrid, Grid3x3, Square, Pentagon, RectangleHorizontal, Grid2x2, Building, Flame, Home, PanelTop, Droplets, ArrowDownToLine, TrendingDown, Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles, Scissors } from 'lucide-react';
 import { services, Service, getServicesByCategory } from '@/data/services';
 
 interface ServicesProps {
@@ -12,7 +12,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Palette, Flower2, TreeDeciduous, Sprout, Layers, Circle, Leaf, Maximize,
   LayoutGrid, Grid3x3, Square, Pentagon, RectangleHorizontal, Grid2x2,
   Building, Flame, Home, Fence: PanelTop, Droplets, ArrowDownToLine, TrendingDown,
-  Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles, Scissors, Grass
+  Lightbulb, ShieldCheck, CloudRain, Ruler, Wind, Sparkles, Scissors
 };
 
 export default function Services({ citySlug = 'dallas', showAll = false, limit }: ServicesProps) {
