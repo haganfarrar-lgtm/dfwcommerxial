@@ -64,12 +64,12 @@ export const services: Service[] = [
     ],
     category: 'landscaping',
     icon: 'Flower2',
-    heroImage: '/images/commercial/commerial planting/commercial landscaping - turfscape - 1.jpg',
+    heroImage: '/images/commercial/commercial planting/commercial landscaping - turfscape - 1.jpg',
     images: [
-      "/images/commercial/commerial planting/benefits of fall planting.jpg",
-      "/images/commercial/commerial planting/commercial landscaping - turfscape - 1.jpg",
-      "/images/commercial/commerial planting/LevelGreen Commercial Crew team pruning maintenance 9.jpg",
-      "/images/commercial/commerial planting/retirement condo commercial landscaping crew pulling weeds 1.jpg.webp"
+      "/images/commercial/commercial planting/benefits of fall planting.jpg",
+      "/images/commercial/commercial planting/commercial landscaping - turfscape - 1.jpg",
+      "/images/commercial/commercial planting/LevelGreen Commercial Crew team pruning maintenance 9.jpg",
+      "/images/commercial/commercial planting/retirement condo commercial landscaping crew pulling weeds 1.jpg.webp"
     ]
   },
   {
