@@ -12,6 +12,8 @@ import { cities, getCityBySlug, getNearbyCities, getAllCitySlugs } from '@/data/
 import { services } from '@/data/services';
 import { businessInfo, generateMetadata as genMeta, generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/seo';
 
+export const dynamic = 'force-static';
+
 interface CityPageProps {
   params: Promise<{ city: string }>;
 }
