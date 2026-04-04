@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
+import LeadPopup from '@/components/LeadPopup';
 import Footer from '@/components/Footer';
 import { businessInfo, generateLocalBusinessSchema, generateOrganizationSchema, generateWebSiteSchema, generateAggregateRatingSchema } from '@/lib/seo';
 
@@ -114,6 +115,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+          <LeadPopup />
       </body>
     </html>
   );
